@@ -10,7 +10,7 @@ import { CartContext } from '../../contexts/cart.context';
 import { ReactComponent as KRMLogo  } from '../../assets/bird_2.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
-import './navigation.styles.scss';
+import {NavigationContainer, NavLinks, Navlink, LogoContainer} from './navigation.styles';
 
 const Navigation = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
@@ -23,26 +23,26 @@ const Navigation = () => {
  
     return (
       <Fragment>
-        <div className='navigation'>
-          <Link className='logo-container' to='/'>
+        <NavigationContainer>
+          <LogoContainer to='/'>
             <KRMLogo className='logo'/>
-          </Link>   
+          </LogoContainer>   
           
-          <div className='nav-links-container' >
-            <Link className='nav-link' to='/shop'>
+          <NavLinks>
+            <Navlink to='/shop'>
                 SHOP
-            </Link>
+            </Navlink>
             {
               currentUser ? (
-                <span className='nav-link' onClick={signOuthandler}>SIGN OUT</span>
-                ) : ( <Link className='nav-link' to='/auth'>
+                <Navlink as='span' onClick={signOuthandler}>SIGN OUT</Navlink>
+                ) : ( <Navlink to='/auth'>
                         SIGN IN
-                      </Link>
+                      </Navlink>
                     )}
             <CartIcon />
-          </div>
+          </NavLinks>
           {isCartOpen && <CartDropdown />}
-        </div>
+        </NavigationContainer>
         <Outlet />
       </Fragment>
     );
