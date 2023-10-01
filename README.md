@@ -1,5 +1,9 @@
 # Ecommerce app created while learning React following the ZTM course
 
+Hosted on Netlify:
+https://651971068aab580008836e28--resplendent-queijadas-398d6c.netlify.app/
+
+
 Features implemented:
 		<p>
 		<br>- React components
