@@ -4,7 +4,7 @@ import { CartContext } from '../../contexts/cart.context';
 
 import Button, {BUTTON_TYPE_CLASSES} from '../button/button.component';
 
-import { ProductCardContainer, Img, Footer, Name, Price } from './product-card.styles'
+import { ProductCardContainer, Footer, Name, Price } from './product-card.styles'
 
 
 const ProductCard = ({ product }) => {
@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
    return (
     
    <ProductCardContainer>
-        <Img src={imageUrl} alt={`${name}`} />
+        <img src={imageUrl} alt={`${name}`} />
         <Footer>
             <Name>{name}</Name>
             <Price>{price}</Price>
