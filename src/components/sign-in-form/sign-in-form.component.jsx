@@ -11,7 +11,7 @@ import { signInWithGooglePopup,
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";    
 
-import { UserContext } from "../../contexts/user.context";
+//import { UserContext } from "../../contexts/user.context";
 
 const defaultFormFirlds = {
     email: '',
@@ -22,7 +22,7 @@ const SignInForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFirlds);
     const {email, password, } = formFields;
 
-    const { setCurrentUser } = useContext(UserContext);
+   // const { setCurrentUser } = useContext(UserContext);
 
     const resetFormFields = () => {
         setFormFields(defaultFormFirlds);

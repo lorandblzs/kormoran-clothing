@@ -6,7 +6,6 @@ import { selectCategoriesMap } from '../../store/categories/category.selector';
 
 import CategoryPreview from '../../components/category-preview/category-preview.component';
 
-
 const CategoriesPreview = () => {
     const categoriesMap = useSelector(selectCategoriesMap);
 
